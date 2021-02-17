@@ -30,9 +30,10 @@ mat-card {
   padding-top: 10px;
 }
 
-.contentBody {
-  padding: 60px 1rem;
-  background :#1b6ca8;
+.content-body{
+  min-height: 100%;
+  padding: 60px 1rem; 
+  background: #16bca8;
   display: block;
 }
 
