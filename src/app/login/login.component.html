@@ -2,7 +2,7 @@
 <mat-card>
   <mat-card-content>
     <div class="header">
-      <P>Sign Into Your Account </P>
+      <mat-card-title>Sign In</mat-card-title>
     </div>
     <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
       <div class="emailInput">
@@ -12,8 +12,7 @@
           [(ngModel)]="emailent"
             formControlName="email"
             matInput
-            placeholder="Enter email address" required
-          />
+            placeholder="Enter email address" required/>
           <mat-error *ngIf="!loginForm.controls['email'].valid">
               Email is required
             </mat-error>

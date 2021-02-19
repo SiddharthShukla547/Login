@@ -5,6 +5,9 @@ mat-card {
   max-height: 600px;
 }
 
+mat-card-title{
+    padding: 10px;
+}
 .header{
   text-align: center;
 
@@ -32,7 +35,7 @@ mat-card {
 
 .content-body{
   min-height: 100%;
-  padding: 60px 1rem; 
+  padding: 60px 1rem;
   background: #16bca8;
   display: block;
 }

@@ -10,15 +10,31 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 })
 export class SidenavComponent{
 
-  mobileQuery: MediaQueryList;
+  // mobileQuery: MediaQueryList;
 
-  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+  // fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
-  private _mobileQueryListener: () => void;
+  // private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+  // constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  //   this.mobileQuery = media.matchMedia('(max-width: 600px)');
+  //   this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+  // }
+
+  title = 'NavBar';
+
+  isMenuOpen = false;
+  contentMargin = 240;
+
+  onToolbarMenuToggle() {
+    console.log('On toolbar toggled', this.isMenuOpen);
+    this.isMenuOpen = !this.isMenuOpen;
+
+    if(!this.isMenuOpen) {
+      this.contentMargin = 60;
+    } else {
+      this.contentMargin = 240;
+    }
   }
 
 
