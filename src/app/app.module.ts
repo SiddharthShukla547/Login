@@ -14,14 +14,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-// import { HeaderComponent } from './home-page/header/header.component';
-// import { HomepageNavComponent } from './home-page/homepage-nav/homepage-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './home-page/sidenav/sidenav.component';
-// import { HomeNavBarComponent } from './home-page/home-nav-bar/home-nav-bar.component';
-// import { HomeSideBarComponent } from './home-page/home-side-bar/home-side-bar.component';
-// import { NavComponent } from './home-page/nav/nav.component'
+import { HotTableModule } from '@handsontable/angular';
+import { TableComponent } from './home-page/table/table.component';
 
 
 @NgModule({
@@ -30,11 +27,7 @@ import { SidenavComponent } from './home-page/sidenav/sidenav.component';
     LoginComponent,
     SidenavComponent,
     HomePageComponent,
-    // HomeNavBarComponent,
-    // HomeSideBarComponent,
-    // NavComponent,
-    // HeaderComponent,
-    // HomepageNavComponent
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,8 +42,8 @@ import { SidenavComponent } from './home-page/sidenav/sidenav.component';
     MatToolbarModule,
     LayoutModule,
     MatListModule,
-    RouterModule
-    // MaterialModule
+    RouterModule,
+    HotTableModule.forRoot()
   ],
   exports:[
     MatButtonModule,
