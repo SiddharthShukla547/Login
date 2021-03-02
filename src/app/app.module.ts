@@ -19,6 +19,10 @@ import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './home-page/sidenav/sidenav.component';
 import { HotTableModule } from '@handsontable/angular';
 import { TableComponent } from './home-page/table/table.component';
+// import { SettingsComponent } from './settings/settings.component';
+import { SetComponent } from './set/set.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,6 +32,8 @@ import { TableComponent } from './home-page/table/table.component';
     SidenavComponent,
     HomePageComponent,
     TableComponent,
+    SetComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,8 @@ import { TableComponent } from './home-page/table/table.component';
     LayoutModule,
     MatListModule,
     RouterModule,
-    HotTableModule.forRoot()
+    HotTableModule.forRoot(),
+    HttpClientModule
   ],
   exports:[
     MatButtonModule,

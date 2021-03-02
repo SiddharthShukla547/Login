@@ -22,6 +22,7 @@ export class SidenavComponent{
   // }
 
   title = 'NavBar';
+  choice = '';
 
   isMenuOpen = false;
   contentMargin = 240;
@@ -37,5 +38,12 @@ export class SidenavComponent{
     }
   }
 
+  DashChange(){
+    this.choice = 'Dash';
+  }
+
+  HomeChange(){
+    this.choice = 'Home';
+  }
 
 }

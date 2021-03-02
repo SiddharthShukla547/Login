@@ -58,7 +58,19 @@
       <mat-list-item>
         <button
         class="menu-item"
-          mat-flat-button>
+          mat-flat-button
+          [routerLink]="['/HomePage']"
+          (click)="HomeChange()">
+          <mat-icon>home</mat-icon>
+        HomePage</button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button
+        class="menu-item"
+          mat-flat-button
+          [routerLink]="['/Dashboard']"
+          (click)="DashChange()">
           <mat-icon>dashboard</mat-icon>
         Dashboard</button>
       </mat-list-item>
@@ -66,7 +78,8 @@
       <mat-list-item>
           <button
           class="menu-item"
-            mat-flat-button>
+            mat-flat-button
+            [routerLink]="['/Dashboard']">
             <mat-icon>work</mat-icon>
           Project</button>
         </mat-list-item>
@@ -74,7 +87,8 @@
         <mat-list-item>
             <button
             class="menu-item"
-              mat-flat-button>
+              mat-flat-button
+              [routerLink] = "['/Settings']">
               <mat-icon>settings_application</mat-icon>
             Settings</button>
           </mat-list-item>
@@ -84,7 +98,17 @@
   <mat-sidenav-content
   [ngStyle]="{ 'margin-left.px': contentMargin }"  >
     <mat-selection-list class="dash-list">
-      <h1 class="col-md-3" > <app-table></app-table> </h1>
+
+      <div class="col-md-3" *ngIf="choice === 'Home'">
+        <button mat-stroked-button color="primary"
+        [routerLink]="['/Dashboard']"
+        (click)="DashChange()">Import</button>
+      </div>
+
+      <div class="container" *ngIf="choice === 'Dash'">
+          <app-table></app-table>
+      </div>
+
     </mat-selection-list>
   </mat-sidenav-content>
 </mat-sidenav-container>
