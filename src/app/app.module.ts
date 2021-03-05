@@ -19,10 +19,14 @@ import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './home-page/sidenav/sidenav.component';
 import { HotTableModule } from '@handsontable/angular';
 import { TableComponent } from './home-page/table/table.component';
-// import { SettingsComponent } from './settings/settings.component';
 import { SetComponent } from './set/set.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlipCardModule } from './flip-card/flip-card.module';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import{ IgxIconModule } from 'igniteui-angular';
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -34,6 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     TableComponent,
     SetComponent,
     DashboardComponent,
+    MapComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     RouterModule,
     HotTableModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FlipCardModule,
+    AgmCoreModule.forRoot({
+      apiKey:''
+    })
   ],
   exports:[
     MatButtonModule,

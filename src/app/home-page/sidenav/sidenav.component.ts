@@ -22,7 +22,7 @@ export class SidenavComponent{
   // }
 
   title = 'NavBar';
-  choice = '';
+  choice = 'Home';
 
   isMenuOpen = false;
   contentMargin = 240;

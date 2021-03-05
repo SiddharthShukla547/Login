@@ -1,1 +1,104 @@
-<app-sidenav></app-sidenav>
+<mat-toolbar id="mainToolbar" color="primary">
+  <mat-icon
+    (click)="onToolbarMenuToggle()"
+    id="toolbarMenu">subject</mat-icon>
+  Energy Index Portal | HomePage
+  <span class="toolbar-spacer"></span>
+  <mat-icon
+    class="toolbar-icon"
+    matBadge="8"
+    matBadgePosition="after"
+    matBadgeColor="accent"
+  >notifications</mat-icon>
+</mat-toolbar>
+
+<mat-sidenav-container
+  id="sidenavContainer"
+ fullscreen>
+ <mat-sidenav
+    mode="side"
+    #sidenav
+    id="sidenav"
+    [class.menu-open]="isMenuOpen"
+    [class.menu-close]="!isMenuOpen"
+    opened>
+
+    <mat-list id="menus">
+      <mat-card>
+        <mat-card-header>
+          <div
+            mat-card-avatar
+            class="avatar"></div>
+
+          <mat-card-title>John Doe</mat-card-title>
+          <mat-card-subtitle>Internal</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <!-- <mat-list-item>
+        <button
+        class="menu-item"
+          mat-flat-button
+          [routerLink]="['/HomePage']">
+          <mat-icon>home</mat-icon>
+        HomePage</button>
+      </mat-list-item> -->
+
+      <mat-list-item>
+        <button
+        class="menu-item"
+          mat-flat-button
+          [routerLink]="['/Dashboard']">
+          <mat-icon>dashboard</mat-icon>
+        Dashboard</button>
+      </mat-list-item>
+
+      <mat-list-item>
+          <button
+          class="menu-item"
+            mat-flat-button
+            [routerLink]="['/Dashboard']">
+            <mat-icon>work</mat-icon>
+          Project</button>
+        </mat-list-item>
+
+        <mat-list-item>
+            <button
+            class="menu-item"
+              mat-flat-button
+              [routerLink] = "['/Settings']">
+              <mat-icon>settings_application</mat-icon>
+            Settings</button>
+          </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content
+  [ngStyle]="{ 'margin-left.px': contentMargin }"  >
+    <mat-selection-list class="dash-list">
+
+      <div>
+        <button mat-raised-button color="accent"
+          (click)="displayCBM()">CBM</button>
+      </div>
+      <div>
+        <button mat-raised-button color="primary"
+          (click)="displaySHPPL()">SHPPL</button>
+      </div>
+
+      <div class="containerline">
+        <div class="line"><mat-divider [ngStyle]="{borderTopColor: getColor()}"></mat-divider></div>
+        <div class="text mat-body-strong">Table</div>
+        <div class="line"><mat-divider [ngStyle]="{borderTopColor: getColor()}"></mat-divider></div>
+      </div>
+
+      <div id="tablediv" *ngIf="CBMdis" class="container">
+        <app-table></app-table>
+      </div>
+
+      <div id="tablediv" *ngIf="SHPPLdis" class="container">
+        <app-table></app-table>
+      </div>
+
+    </mat-selection-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,105 @@
+#toolbarMenu {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#mainToolbar .toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+#mainToolbar .toolbar-icon {
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+#sidenavContainer {
+  margin-top: 64px;
+}
+
+#sidenav {
+  width: 240px;
+}
+
+#sidenav.menu-close {
+  width: 70px
+}
+
+#sidenav.menu-open {
+  width: 240px
+}
+
+#sidenav .avatar {
+  background-image: url('http://i.pravatar.cc/300');
+  background-size: cover;
+}
+
+#sidenav .mat-list-item-content {
+  padding: 0 0;
+}
+
+#sidenav .menu-item {
+  width: 100%;
+  border-radius: 0;
+  text-align: left;
+  padding: 10px;
+}
+
+#sidenav .menu-item:hover {
+background: #eee;
+}
+
+#sidenav .menu-item mat-icon {
+  margin-right: 20px;
+  margin-left: 12px;
+}
+
+.dash-list h3 {
+  padding: 12px;
+}
+
+mat-list{
+  padding-right: -30px;
+}
+
+#importbutton{
+ margin: 10px;
+}
+
+button{
+  display: block;
+  width: 90%;
+  padding: 7px 7px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+#tablediv{
+  margin: 50px auto;
+  justify-self: center;
+  align-content: center;
+}
+
+.containerline{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.line{
+  flex: 1;
+}
+
+.text{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.mat-typography{
+  font-size: 14px;
+}

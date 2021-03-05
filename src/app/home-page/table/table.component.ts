@@ -14,15 +14,23 @@ export class TableComponent implements OnInit {
 
   lst: tableServiceClasses[];
 
-  constructor( private http: HttpClient, private tableservice: TableserviceService ) { }
-
-  ngOnInit(): void {
+  constructor( private http: HttpClient, private tableservice: TableserviceService ) {
     this.tableservice.getData()
     .subscribe(
       data => {
         this.lst = data;
       }
     )
+  }
+
+  ngOnInit(): void {
+    // this.tableservice.getData()
+    // .subscribe(
+    //   data => {
+    //     this.lst = data;
+    //     this.newlst = this.lst;
+    //   }
+    // )
   }
 
 
@@ -44,43 +52,49 @@ export class TableComponent implements OnInit {
     viewportRowRenderingOffset: "auto",
     //colWidths: 150,
     height: 450,
-    // allowInsertColumn: false,
-    // allowInsertRow: false,
+     allowInsertColumn: false,
+     allowInsertRow: true,
     // allowRemoveColumn: false,
     // allowRemoveRow: false,
     // autoWrapRow: false,
     // autoWrapCol: false,
-    //  stretchH: "all",
-    width: 1000 ,
-    // autoWrapRow: true,
+      stretchH: "all",
+    // width: 1000 ,
+    //  autoWrapRow: true,
     // height: 487,
     // maxRows: 22,
     manualRowResize: true,
     // overflow: "hidden",   //Check if this is the right way or else use in CSS
-    // className: "htCenter",
-    className: "htMiddle",
+    className: "htCenter",
+    // className: "htMiddle",
     manualColumnResize: true,
-    colHeaders: ["Fuel Description","Fuel Type","Uom","Fuel Consumed","Fuel Cost","Data Provider","Data Approver"],
+    colHeaders : ["Fuel Description","Fuel Type","Uom","Fuel Consumed","Fuel Cost","Data Provider","Data Approver","Remarks","Data Source"],
      rowHeaders: true,
+
     columns:[
-      {data:0},
-      {data:1},
-      {data:2},
-      {data:3},
-      {data:4},
-    //   {readOnly: true,
-    //     rendrer: (instance, TD, row, col, prop, value, cellProperties) =>{
-    //     TD.innerHTML = `<button>Submit</button>`;
-    //     return TD;
-    //   }
-    // },
-    //   {readOnly: true,
-    //     rendrer: (instance, TD, row, col, prop, value, cellProperties) =>{
-    //     TD.innerHTML = `<button>Submit</button>`;
-    //     return TD;
-    //   }
-    // }
+      {data: 'postId'},
+      {data: 'id'},
+      {data: 'name'},
+      {data: 'email'},
+      {data: 'body'},
+      {readOnly: true,
+        renderer: (instance, TD, row, col, prop, value, cellProperties) =>{
+        TD.innerHTML = `<button class="mat-flat-button" id="custombuttons"  style="color:#4CAF50;">Submit</button>`;
+        return TD;
+      }
+      },
+      {
+        readOnly: true,
+        renderer: (instance, TD, row, col, prop, value, cellProperties) =>{
+        TD.innerHTML = `<button class="mat-flat-button" id="custombuttons" style="color:#03A9F4;">Review</button>`;
+        return TD;
+      }
+    },
+    {},
+    {type:'dropdown',
+      source:['Manual','Automatic']}
     ],
+
     manualRowMove: true,
     manualColumnMove: true,
     contextMenu: true,

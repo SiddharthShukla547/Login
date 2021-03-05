@@ -1,2 +1,126 @@
-<app-sidenav></app-sidenav>
-<!-- <app-table></app-table> -->
+<mat-toolbar id="mainToolbar" color="primary">
+  <mat-icon
+    (click)="onToolbarMenuToggle()"
+    id="toolbarMenu">subject</mat-icon>
+  Energy Index Portal | Dashboard
+  <span class="toolbar-spacer"></span>
+  <mat-icon
+    class="toolbar-icon"
+    matBadge="8"
+    matBadgePosition="after"
+    matBadgeColor="accent"
+  >notifications</mat-icon>
+</mat-toolbar>
+
+<mat-sidenav-container
+  id="sidenavContainer"
+ fullscreen>
+ <mat-sidenav
+    mode="side"
+    #sidenav
+    id="sidenav"
+    [class.menu-open]="isMenuOpen"
+    [class.menu-close]="!isMenuOpen"
+    opened>
+
+    <mat-list id="menus">
+      <mat-card>
+        <mat-card-header>
+          <div
+            mat-card-avatar
+            class="avatar"></div>
+
+          <mat-card-title>John Doe</mat-card-title>
+          <mat-card-subtitle>Internal</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <mat-list-item>
+        <button
+        class="menu-item"
+          mat-flat-button
+          [routerLink]="['/HomePage']">
+          <mat-icon>home</mat-icon>
+        HomePage</button>
+      </mat-list-item>
+
+      <!-- <mat-list-item>
+        <button
+        class="menu-item"
+          mat-flat-button
+          [routerLink]="['/Dashboard']">
+          <mat-icon>dashboard</mat-icon>
+        Dashboard</button>
+      </mat-list-item> -->
+
+      <mat-list-item>
+          <button
+          class="menu-item"
+            mat-flat-button
+            [routerLink]="['/Dashboard']">
+            <mat-icon>work</mat-icon>
+          Project</button>
+        </mat-list-item>
+
+        <mat-list-item>
+            <button
+            class="menu-item"
+              mat-flat-button
+              [routerLink] = "['/Settings']">
+              <mat-icon>settings_application</mat-icon>
+            Settings</button>
+          </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content
+  [ngStyle]="{ 'margin-left.px': contentMargin }"  style="background-color: #f2f2f2;">
+    <mat-selection-list class="dash-list">
+
+      <!-- <div class="col-md-8">
+        <mat-card class="dashcards">
+          <mat-card-header>Energy Index</mat-card-header>
+            <mat-card-subtitle>Calculated on data retrieved</mat-card-subtitle>
+          <mat-card-content class="mat-display-1">5422.40</mat-card-content>
+        </mat-card>
+      </div> -->
+
+      <div style="margin-top: 10px;" >
+      <flip-card class="col-md-4">
+        <flip-card-front>
+            <h2>Energy Index</h2>
+        </flip-card-front>
+        <flip-card-back>
+            <h2>IDK</h2>
+        </flip-card-back>
+      </flip-card>
+
+
+      <flip-card class="col-md-4">
+        <flip-card-front >
+            <h2>Cost Index</h2>
+            <!-- <mat-icon id="moneyicon">attach_money</mat-icon> -->
+        </flip-card-front>
+        <flip-card-back>
+            <h2>IDK</h2>
+        </flip-card-back>
+      </flip-card>
+
+
+      <flip-card class="col-md-4">
+        <flip-card-front>
+            <h2>Carbon Index</h2>
+        </flip-card-front>
+        <flip-card-back>
+            <h2>IDK</h2>
+        </flip-card-back>
+      </flip-card>
+    </div>
+
+      
+
+
+
+    </mat-selection-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
