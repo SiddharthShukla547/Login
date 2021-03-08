@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900");
+
 #toolbarMenu {
   cursor: pointer;
   margin-right: 20px;
@@ -103,3 +105,152 @@ button{
 .mat-typography{
   font-size: 14px;
 }
+
+// :root { --time: 0.707s }
+
+// .cards {
+//   display: grid;
+// }
+
+// .card {
+//   perspective: 40rem;
+// }
+
+// .card-body {
+//   transform-style: preserve-3d;
+//   transition: var(--time) transform;
+
+//   .card:hover & {
+//     transform: rotateX(-180deg);
+//   }
+// }
+
+// .card-front, .card-back {
+//   backface-visibility: hidden;
+// }
+
+// .card-back {
+//   position: absolute;
+//   top: 0; right: 0; bottom: 0; left: 0;
+//   transform: rotateX(-180deg);
+// }
+
+// /* Make it Pretty */
+
+// body {
+//   line-height: 1.3;
+//   font-family: sans-serif;
+// }
+
+// .cards {
+//   grid-gap: 1.5rem;
+//   padding: 3rem;
+//   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+// }
+
+// .card {
+//   display: flex;
+//   transition: transform calc(var(--time) / 4);
+//   text-decoration: none;
+//   color: inherit;
+
+//   &:active {
+//     transform: scale(0.975);
+//   }
+// }
+
+// .card-body {
+//   border-radius: 0.25rem;
+//   flex: 1;
+// }
+
+// .card-front, .card-back {
+//   @extend .shadow;
+//   display: flex;
+//   align-items: center;
+//   background-color: white;
+//   box-sizing: border-box;
+//   padding: 1.5rem;
+//   border-radius: 0.25rem;
+// }
+
+// .card-front {
+//   font-size: 1.5rem;
+// }
+
+// .shadow {
+//   box-shadow: 0 -1px 1px rgba(0,0,0,0.04),
+//               0 2px 2px rgba(0,0,0,0.04),
+//               0 4px 4px rgba(0,0,0,0.04),
+//               0 8px 8px rgba(0,0,0,0.04),
+//               0 16px 16px rgba(0,0,0,0.04);
+// }
+
+
+
+// .card {
+//   flex-shrink: 1;
+//   display: grid;
+//   font: 14px/28px Montserrat; color: brown;
+//   perspective: 40rem;
+//   --flipped: 0; --delay: .5s;
+
+//   &:not(:first-child) { margin-top: 1rem; }
+//   &:hover {
+//     --flipped: 1; --delay: 0s;
+//   }
+// }
+// .card__face {
+//   grid-area: 1 / -1 / 1 / -1;
+//   display: flex; align-items: center; justify-content: center;
+//   padding: 3rem;
+//   backface-visibility: hidden;
+//   transition: 1s var(--delay) transform;
+// }
+// .card__face--front {
+//   z-index: 2;
+//   font-weight: 900; font-size: 50px; line-height: 50px; text-transform: uppercase; letter-spacing: .03em; color: #FFF;
+//   background: var(--face-color);
+//   transform: rotateX(calc(180deg * var(--flipped)));
+// }
+// .card__face--reverse {
+//   z-index: 1;
+//   transform: rotateX(calc(180deg * var(--flipped) - 180deg));
+//   background: #FF4081;
+// }
+
+
+
+// .card-container {
+//   width: 300px;
+//   height: 270px;
+//   position: relative;
+//   -webkit-perspective: 500px;
+//   perspective: 500px;
+// }
+
+// .flippable-card {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   transform-style: preserve-3d;
+//   transition: transform 1s;
+// }
+
+// .flippable-card mat-card {
+//   margin: 0;
+//   display: block;
+//   position: absolute;
+//   width: 252px;
+//   height: 222px;
+//   backface-visibility: hidden;
+// }
+
+// .flippable-card .back {
+//   background: #f0f0f0;
+//   transform: rotateY( 180deg );
+// }
+
+// .flippable-card.flipped {
+//   transform: rotateY( 180deg );
+// }

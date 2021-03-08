@@ -14,8 +14,9 @@ export class HomePageComponent implements OnInit {
   }
   CBMdis = false;
   SHPPLdis = false;
-
+  // flipped = false;
   title = 'NavBar';
+  main_icons = true;
 
   isMenuOpen = false;
   contentMargin = 240;
@@ -47,4 +48,8 @@ export class HomePageComponent implements OnInit {
       return '#4527A0';
   }
 
+  getBut(){
+    this.main_icons = !this.main_icons;
+    return this.main_icons;
+  }
 }

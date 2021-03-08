@@ -76,14 +76,101 @@
   [ngStyle]="{ 'margin-left.px': contentMargin }"  >
     <mat-selection-list class="dash-list">
 
-      <div>
-        <button mat-raised-button color="accent"
-          (click)="displayCBM()">CBM</button>
+      <div *ngIf="main_icons">
+          <div class="col-md-6">
+            <button mat-raised-button color="primary"
+              (click)="getBut()">CBM</button>
+          </div>
+          <div class="col-md-6">
+            <button mat-raised-button color="primary"
+              (click)="displaySHPPL()">SHPPL</button>
+          </div>
       </div>
-      <div>
-        <button mat-raised-button color="primary"
-          (click)="displaySHPPL()">SHPPL</button>
+
+
+      <div *ngIf="!main_icons">
+        <div class="col-md-3">
+          <button mat-raised-button color="accent"
+            (click)="getBut()">Back</button>
+        </div>
+        <div class="col-md-3">
+          <button mat-raised-button color="primary"
+            (click)="displaySHPPL()">G11</button>
+        </div>
+        <div class="col-md-3">
+          <button mat-raised-button color="primary"
+            (click)="displaySHPPL()">G12</button>
+        </div>
+        <div class="col-md-3">
+          <button mat-raised-button color="primary"
+            (click)="displaySHPPL()">G13</button>
+        </div>
       </div>
+
+
+
+      <!-- <div class="cards">
+        <a class="card" href="#">
+          <div class="card-body">
+            <h2 class="card-front">
+              First Card
+            </h2>
+
+            <p class="card-back">
+              Back face content.
+            </p>
+          </div>
+        </a>
+
+        <a class="card" href="#">
+          <div class="card-body">
+            <h2 class="card-front">
+              Second Card
+            </h2>
+
+            <p class="card-back">
+              Back face content.
+            </p>
+          </div>
+        </a>
+      </div> -->
+
+
+
+      <!-- <div class="container">
+        <div class="card" mat-raised-button style="--face-color: #3f51b5;">
+          <div class="card__face card__face--front">
+            flip me!
+          </div>
+          <div class="card__face card__face--reverse">
+            A wonderful serenity
+          </div>
+        </div>
+        <div class="card" style="--face-color: #3f51b5;">
+          <div class="card__face card__face--front">
+            flip me!
+          </div>
+          <div class="card__face card__face--reverse">
+            helo
+          </div>
+        </div>
+      </div> -->
+
+
+
+
+      <!-- <div class='card-container'>
+        <div class='flippable-card' [ngClass]="{'flipped':flipped}" (click)='flipped = !flipped'>
+          <mat-card class=''>
+            <mat-card-title>Booya</mat-card-title>
+          </mat-card>
+          <mat-card class='back'>
+              <mat-card-title>to ya</mat-card-title>
+          </mat-card>
+        </div>
+      </div> -->
+
+
 
       <div class="containerline">
         <div class="line"><mat-divider [ngStyle]="{borderTopColor: getColor()}"></mat-divider></div>
