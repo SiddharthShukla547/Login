@@ -44,7 +44,7 @@
       </mat-list-item> -->
 
       <mat-list-item>
-        <button
+        <button id="sidenavbut"
         class="menu-item"
           mat-flat-button
           [routerLink]="['/Dashboard']">
@@ -53,7 +53,7 @@
       </mat-list-item>
 
       <mat-list-item>
-          <button
+          <button id="sidenavbut"
           class="menu-item"
             mat-flat-button
             [routerLink]="['/Dashboard']">
@@ -62,7 +62,7 @@
         </mat-list-item>
 
         <mat-list-item>
-            <button
+            <button id="sidenavbut"
             class="menu-item"
               mat-flat-button
               [routerLink] = "['/Settings']">
@@ -76,7 +76,7 @@
   [ngStyle]="{ 'margin-left.px': contentMargin }"  >
     <mat-selection-list class="dash-list">
 
-      <div *ngIf="main_icons">
+      <!-- <div *ngIf="main_icons">
           <div class="col-md-6">
             <button mat-raised-button color="primary"
               (click)="getBut()">CBM</button>
@@ -85,10 +85,20 @@
             <button mat-raised-button color="primary"
               (click)="displaySHPPL()">SHPPL</button>
           </div>
+      </div> -->
+
+
+      <div>
+        <button class="col-md-3" id="contentbut" (click)="openDialog()" matTooltip="Importing CBM data for viewing/editing" matTooltipPosition="below" mat-raised-button color="primary">Import CBM data</button>
+        <!-- <span class="col-md-8" fontAttributes="Italic">Some basic info about CBM data</span> -->
+      </div>
+      <div>
+        <button class="col-md-3" id="contentbut" routerLink="/Tables" matTooltip="Importing SHPPL data for viewing/editing" matTooltipPosition="below" mat-raised-button color="primary">Import SHPPL data</button>
       </div>
 
 
-      <div *ngIf="!main_icons">
+
+      <!-- <div *ngIf="!main_icons">
         <div class="col-md-3">
           <button mat-raised-button color="accent"
             (click)="getBut()">Back</button>
@@ -105,7 +115,9 @@
           <button mat-raised-button color="primary"
             (click)="displaySHPPL()">G13</button>
         </div>
-      </div>
+      </div> -->
+
+
 
 
 
@@ -172,7 +184,13 @@
 
 
 
-      <div class="containerline">
+
+
+
+      <!-- Table Stuff below  -->
+
+
+      <!-- <div class="containerline">
         <div class="line"><mat-divider [ngStyle]="{borderTopColor: getColor()}"></mat-divider></div>
         <div class="text mat-body-strong">Table</div>
         <div class="line"><mat-divider [ngStyle]="{borderTopColor: getColor()}"></mat-divider></div>
@@ -184,7 +202,7 @@
 
       <div id="tablediv" *ngIf="SHPPLdis" class="container">
         <app-table></app-table>
-      </div>
+      </div> -->
 
     </mat-selection-list>
   </mat-sidenav-content>

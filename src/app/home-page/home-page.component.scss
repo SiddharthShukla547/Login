@@ -67,14 +67,25 @@ mat-list{
  margin: 10px;
 }
 
-button{
+button #sidenavbut{
   display: block;
-  width: 90%;
-  padding: 7px 7px;
+  // width: 90%;
+  width: 30%;
+  padding: 30px 40px;
   font-size: 16px;
   text-align: center;
   border-radius: 10px;
   margin: 10px auto;
+}
+
+#contentbut{
+  display: block;
+  width: 20%;
+  padding: 30px 30px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 10px 30px;
 }
 
 #tablediv{

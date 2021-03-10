@@ -25,8 +25,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlipCardModule } from './flip-card/flip-card.module';
 // import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // import{ IgxIconModule } from 'igniteui-angular';
-import { AgmCoreModule } from '@agm/core';
-import { MapComponent } from './map/map.component';
+// import { AgmCoreModule } from '@agm/core';
+// import { MapComponent } from './map/map.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HomedialogComponent } from './home-page/homedialog/homedialog.component';
 
 
 @NgModule({
@@ -38,8 +42,8 @@ import { MapComponent } from './map/map.component';
     TableComponent,
     SetComponent,
     DashboardComponent,
-    MapComponent,
-
+    HomedialogComponent,
+    // MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,9 +62,11 @@ import { MapComponent } from './map/map.component';
     HotTableModule.forRoot(),
     HttpClientModule,
     FlipCardModule,
-    AgmCoreModule.forRoot({
-      apiKey:''
-    })
+    // AgmCoreModule.forRoot({
+    //   apiKey:''
+    // }),
+    MatTooltipModule,
+    MatDialogModule
   ],
   exports:[
     MatButtonModule,
@@ -69,9 +75,14 @@ import { MapComponent } from './map/map.component';
     ReactiveFormsModule,
     MatIconModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[
+    HomedialogComponent
+  ]
 })
 export class AppModule { }

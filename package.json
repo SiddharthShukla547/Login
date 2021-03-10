@@ -13,7 +13,7 @@
   "dependencies": {
     "@agm/core": "^3.0.0-beta.0",
     "@angular/animations": "~11.1.2",
-    "@angular/cdk": "^11.1.2",
+    "@angular/cdk": "^11.2.3",
     "@angular/common": "~11.1.2",
     "@angular/compiler": "~11.1.2",
     "@angular/core": "~11.1.2",
@@ -24,6 +24,7 @@
     "@angular/router": "~11.1.2",
     "@handsontable/angular": "^6.0.1",
     "@handsontable/formulajs": "^2.0.2",
+    "@material/dialog": "^10.0.0",
     "bessel": "^1.0.2",
     "bootstrap": "^3.4.1",
     "dompurify": "^2.2.6",

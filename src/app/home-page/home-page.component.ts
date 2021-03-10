@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // import { Router } from '@angular/router';
+// import { MatTooltipModule } from '@angular/material';
+import { TooltipPosition } from '@angular/material/tooltip';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { HomedialogComponent } from './homedialog/homedialog.component';
 
 @Component({
   selector: 'app-home-page',
@@ -8,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -52,4 +56,15 @@ export class HomePageComponent implements OnInit {
     this.main_icons = !this.main_icons;
     return this.main_icons;
   }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(HomedialogComponent,{
+
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
+

@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SetComponent } from './set/set.component'
 import { DashboardComponent } from './dashboard/dashboard.component'
+import { TableComponent } from '../app/home-page/table/table.component';
 
 const routes: Routes = [
   {
@@ -20,13 +21,10 @@ const routes: Routes = [
   {
     path: 'HomePage',
     component: HomePageComponent,
-    children:[
-
-
-    ]
   },
   {path:'Dashboard', component: DashboardComponent},
   {path:'Settings', component: SetComponent},
+  {path: 'Tables', component: TableComponent}
 ];
 
 @NgModule({
