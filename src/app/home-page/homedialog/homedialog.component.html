@@ -4,7 +4,7 @@
 </mat-dialog-content> -->
 
 <mat-dialog-actions>
-  <button id="firstbutton" [routerLink]="['Tables']" mat-raised-button color="accent">GGS10</button>
-  <button mat-raised-button [routerLink]="['Tables']" color="accent">GGS11</button>
-  <button mat-raised-button [routerLink]="['Tables']" color="accent">GGS12</button>
+  <button id="firstbutton" [routerLink]="['Tables']" [mat-dialog-close]=true mat-raised-button color="accent">GGS10</button>
+  <button mat-raised-button [routerLink]="['Tables']" [mat-dialog-close]=true color="accent">GGS11</button>
+  <button mat-raised-button [routerLink]="['Tables']" [mat-dialog-close]=true color="accent">GGS12</button>
 </mat-dialog-actions>

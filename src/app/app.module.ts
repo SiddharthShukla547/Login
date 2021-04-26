@@ -31,6 +31,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HomedialogComponent } from './home-page/homedialog/homedialog.component';
+import { TableviewerComponent } from './tableviewer/tableviewer.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { HomedialogComponent } from './home-page/homedialog/homedialog.component
     SetComponent,
     DashboardComponent,
     HomedialogComponent,
+    TableviewerComponent,
     // MapComponent,
   ],
   imports: [

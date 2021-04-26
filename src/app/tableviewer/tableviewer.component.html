@@ -1,8 +1,9 @@
+
 <mat-toolbar id="mainToolbar" color="primary">
   <mat-icon
     (click)="onToolbarMenuToggle()"
     id="toolbarMenu">subject</mat-icon>
-  Energy Index Portal | Dashboard
+  Energy Index Portal | 
   <span class="toolbar-spacer"></span>
   <mat-icon
     class="toolbar-icon"
@@ -38,19 +39,21 @@
         <button
         class="menu-item"
           mat-flat-button
-          [routerLink]="['/HomePage']">
+          [routerLink]="['/HomePage']"
+          (click)="HomeChange()">
           <mat-icon>home</mat-icon>
         HomePage</button>
       </mat-list-item>
 
-      <!-- <mat-list-item>
+      <mat-list-item>
         <button
         class="menu-item"
           mat-flat-button
-          [routerLink]="['/Dashboard']">
+          [routerLink]="['/Dashboard']"
+          (click)="DashChange()">
           <mat-icon>dashboard</mat-icon>
         Dashboard</button>
-      </mat-list-item> -->
+      </mat-list-item>
 
       <mat-list-item>
           <button
@@ -73,54 +76,11 @@
   </mat-sidenav>
 
   <mat-sidenav-content
-  [ngStyle]="{ 'margin-left.px': contentMargin }"  style="background-color: #f2f2f2;">
+  [ngStyle]="{ 'margin-left.px': contentMargin }"  >
     <mat-selection-list class="dash-list">
-
-      <!-- <div class="col-md-8">
-        <mat-card class="dashcards">
-          <mat-card-header>Energy Index</mat-card-header>
-            <mat-card-subtitle>Calculated on data retrieved</mat-card-subtitle>
-          <mat-card-content class="mat-display-1">5422.40</mat-card-content>
-        </mat-card>
-      </div> -->
-
-      <div style="margin-top: 10px;" >
-      <flip-card class="col-md-4">
-        <flip-card-front>
-            <h1>Energy Index</h1>
-        </flip-card-front>
-        <flip-card-back>
-            <h2>No Data Yet</h2>
-        </flip-card-back>
-      </flip-card>
-
-
-      <flip-card class="col-md-4">
-        <flip-card-front >
-            <h2>Cost Index</h2>
-            <!-- <mat-icon id="moneyicon">attach_money</mat-icon> -->
-        </flip-card-front>
-        <flip-card-back>
-            <h2>No Data Yet</h2>
-        </flip-card-back>
-      </flip-card>
-
-
-      <flip-card class="col-md-4">
-        <flip-card-front>
-            <h2>Carbon Index</h2>
-        </flip-card-front>
-        <flip-card-back>
-            <h2>No Data Yet</h2>
-        </flip-card-back>
-      </flip-card>
-    </div>
-
-
-
-
-
+        <app-table></app-table>
     </mat-selection-list>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
 
